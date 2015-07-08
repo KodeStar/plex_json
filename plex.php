@@ -131,8 +131,8 @@ class Plex_json {
 			curl_setopt ($ch, CURLOPT_TIMEOUT, 60);
 			curl_setopt ($ch, CURLOPT_FOLLOWLOCATION, 1);
 			curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
-			curl_setopt ($ch, CURLOPT_COOKIEJAR, $cookie);
-			curl_setopt ($ch, CURLOPT_COOKIEFILE, $cookie);  // <-- add this line
+			curl_setopt ($ch, CURLOPT_COOKIEJAR, $cookie); // You probably want to change the path of this to one outside your web root
+			curl_setopt ($ch, CURLOPT_COOKIEFILE, $cookie);
 			curl_setopt ($ch, CURLOPT_REFERER, $url );
 			curl_setopt ($ch, CURLOPT_POSTFIELDS, $postdata);
 			curl_setopt ($ch, CURLOPT_POST, 1);
